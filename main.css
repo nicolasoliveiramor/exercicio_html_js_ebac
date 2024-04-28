@@ -1,62 +1,127 @@
-*{
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-body{
-background-color: rgb(40, 173, 235);
+
+.container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    text-decoration: none;
 }
-h2{
-    color: black;
+
+.container header {
+    position: relative;
+    padding: 32px;
+    border-bottom: solid 2px;
+    width: 100%;
+    background-color: rgb(255, 288, 176);
 }
-.container{
-    margin: 80px auto;
-    max-width: 640px;
+
+.container form h1 {
+    display: inline;
+    position: relative;
+    top: 28%;
+    right: 70px;
+    transform: translateY(-50%) translateX(-50%);
+    align-items: center;
     width: 100%;
 }
-form{
-    margin-top: 40%;
 
+.container footer {
+    position: relative;
+    padding: 32px;
+    border-top: solid 2px;
+    width: 100%;
+    background-color: rgb(255, 288, 176);  
+    text-align: center;
+    font-weight: bolder;
 }
-input, button{
-    display: block;
+
+form {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    left: 50%;
+}
+
+form input {
+    display: inline;
     padding: 8px;
-    margin: 8px;
-    width: 100%;
-    margin-bottom: 8px;
-    resize: none;
-    
+    position: relative;
+    top: 32%;
+    right: 14.63%;
+    border-color: black;
+    border-radius: 18px;
 }
-button{
-    background-color: rgb(10, 224, 10);
+
+input:focus {
+    outline-color: black;
+    background-color: white;
+}
+
+button {
+    display: block;
+    margin-top: 8px;
+    background-color: blue;
+    color: whitesmoke;
+    padding: 12px 32px;
     border: none;
+    text-decoration: none;
+    position: relative;
+    top: 36%;
+    left: -5%;
     text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    font-style: italic;
-    cursor: pointer;
-}
-button:hover{
-    background-color: green;
-}
-.mensagen-verdade{
-    background-color: rgb(72, 240, 6);
-    color: white;
+    border-radius: 72px;
+    border: solid 2px;
+    border-color: black;
 }
 
-.mensagen-igual {
-    background-color: goldenrod;
-    color: white;
+button:hover {
+    background-color: darkblue;
+    color: whitesmoke;
+    transition: all 0.2s;
 }
 
+p {
+    padding: 16px 0;
+    background-color: blue;
+    color: white;
+    width: 50%;
+    position: absolute;
+    top: 73%;
+    left: 25%;
+    border-radius: 72px;
+    border: solid 2px;
+    border-color: black;
+    text-align: center;
+    font-weight: bolder;
+}
 
-.mensagen-falso{
+.mensagem-verdade {
+    padding: 10px 0;
+    background-color: blue;
+    color: white;
+    display: none;
+}
+
+.mensagem-igual {
+    padding: 10px 0;
+    background-color: rgb(218, 135, 2);
+    color: white;
+    display: none;
+}
+
+.mensagem-falso {
+    padding: 10px 0;
     background-color: red;
-    color: wheat;
-    
-    
+    color: white;
+    margin-bottom: 8px;
+    display: none;
 }
 
 input.error{

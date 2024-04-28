@@ -1,32 +1,32 @@
-const form = document.getElementById('form-numerico');
+const form = document.getElementById('form');
 
 form.addEventListener('submit',function(e){
     e.preventDefault();   
-    const campoAinput = document.getElementById('campo-a');
-    const campoBinput = document.getElementById('campo-b');
+    const campoAinput = document.getElementById('valorA');
+    const campoBinput = document.getElementById('valorB');
 
     const campoA = campoAinput.value;
     const campoB = campoBinput.value;
 
-    const mensagemFalso = `Número Inválido!`;
+    const mensagemFalso = `Inválido!`;
     const mensagemIgual = `O valor A: ${campoB} é igual ao valor B: ${campoA}, valor não é valido!`;
-    const mensagemVerdade = `Esta correto o número ${campoB} é maior que o número ${campoA}`;
+    const mensagemVerdade = `O número que equivale a B: ${campoB} é maior que o número que equivale a A: ${campoA} correto!`;
     
     if(campoB < campoA){
-        const containerFalso = document.querySelector('.mensagen-falso');
+        const containerFalso = document.querySelector('.mensagem-falso');
         containerFalso.innerHTML = mensagemFalso;
         containerFalso.style.display = 'block';
-        document.querySelector('.mensagen-verdade').style.display = 'none';
-        document.querySelector('.mensagen-igual').style.display = 'none';
+        document.querySelector('.mensagem-verdade').style.display = 'none';
+        document.querySelector('.mensagem-igual').style.display = 'none';
     }
     else if(campoB > campoA){     
-        const containerVerdade = document.querySelector('.mensagen-verdade');
+        const containerVerdade = document.querySelector('.mensagem-verdade');
         containerVerdade.innerHTML = mensagemVerdade;
         containerVerdade.style.display = 'block';
-        document.querySelector('.mensagen-falso').style.display = 'none';
-        document.querySelector('.mensagen-igual').style.display = 'none';
+        document.querySelector('.mensagem-falso').style.display = 'none';
+        document.querySelector('.mensagem-igual').style.display = 'none';
     }else{     
-        const containerIgual = document.querySelector('.mensagen-igual');
+        const containerIgual = document.querySelector('.mensagem-igual');
         containerIgual.innerHTML = mensagemIgual;
         containerIgual.style.display = 'block';
     }
